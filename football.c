@@ -1,7 +1,7 @@
 #include "football.h"
 #include <stdio.h>
 
-int count_combinations(int points) {
+int count_combinations(int points) { //Counts the total number of combinations of points
     int count = 0;
     for (int td2 = 0; td2 * 8 <= points; td2++) {
         for (int td1 = 0; td1 * 7 + td2 * 8 <= points; td1++) {
@@ -19,7 +19,7 @@ int count_combinations(int points) {
     return count;
 }
 
-void print_combinations(int points) {
+void print_combinations(int points) { //Prints all the possibles score combinations
     printf("Possible combinations of scoring plays if a team’s score is %d:\n", points);
     for (int td2 = 0; td2 * 8 <= points; td2++) {
         for (int td1 = 0; td1 * 7 + td2 * 8 <= points; td1++) {

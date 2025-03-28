@@ -10,7 +10,7 @@ int main(int argc, char *argv[]){
     scanf("%d", &input); //Gets input
     int input2;
     float target;
-    float celsius_temp;
+    float celsius_temp; //Allows for the weather advisory to be always calculated in Celsius
     if (input == 3 && temperature < 0) { //If invalid temp
         printf("Error: Temperature cannot be below absolute zero\n");
         printf("Enter Temperature Value: \n");
@@ -59,8 +59,8 @@ int main(int argc, char *argv[]){
         celsius_temp = kelvin_to_celsius(temperature);
     }
     }
-    printf("\nConverted Temperature: %.2f\n", target);
+    printf("\nConverted Temperature: %.2f\n", target); //Prints converted temperature
     printf("Temperature Category: ");
-    categorize_temperature(celsius_temp);
+    categorize_temperature(celsius_temp); //Prints the weather advisory
     return 0;
 }
